@@ -1,4 +1,6 @@
-'''Accepts fasta files of amino acid sequence, extracts specific aa's (defined in a csv index array),
+#!/usr/bin/env python
+
+'''Accepts fasta files of amino acid sequence, extracts specific amino acids (defined in a csv index array),
 and outputs extracted sequences - representing flu antigenic sites - to fasta (default) or csv.'''
 
 '''Author: Diane Eisler, Molecular Microbiology & Genomics, BCCDC Public Health Laboratory,Sept 2017'''
