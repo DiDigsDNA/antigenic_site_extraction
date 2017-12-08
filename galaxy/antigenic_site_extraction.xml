@@ -7,13 +7,21 @@
     '$input_fasta'
     '$index_array'
     '$output_file'
+    #if $csv
+    	-c
+    #end if
   ]]></command>
   <inputs>
     <param name="input_fasta" format="fasta" type="data" />
     <param name="index_array" format="csv" type="data" />
+    <param name="csv" type="boolean" label="Output to csv ?" />
   </inputs>
   <outputs>
-      <data name="output_file" format="fasta"/>
+      <data format="fasta" name="output_file">
+        <change_format>
+            <when input="csv" value="true" format="csv" />
+        </change_format>
+      </data>
   </outputs>
   <tests>
     <test>
