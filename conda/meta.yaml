@@ -1,0 +1,19 @@
+package:
+  name: antigenic_site_extraction
+  version: 0.0.1
+
+source:
+  git_url: https://github.com/didigsdna/antigenic_site_extraction
+  git_rev: master
+
+requirements:
+  run:
+    - python 2.7
+    - biopython
+
+build:
+  number: 0
+
+about:
+  home: https://github.com/DiDigsDNA/antigenic_site_extraction
+

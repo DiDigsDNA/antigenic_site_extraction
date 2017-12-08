@@ -1,0 +1,30 @@
+<tool id="antigenic_site_extraction" name="Antigenic Site Extraction" version="0.0.1">
+  <requirements>
+    <requirement type="package" version="0.0.1">antigenic_site_extraction</requirement>
+  </requirements>
+  <command detect_errors="exit_code"><![CDATA[
+    extract_flu_antigenic_sites.py
+    '$input_fasta'
+    '$index_array'
+    '$output_file'
+  ]]></command>
+  <inputs>
+    <param name="input_fasta" format="fasta" type="data" />
+    <param name="index_array" format="csv" type="data" />
+  </inputs>
+  <outputs>
+      <data name="output_file" format="fasta"/>
+  </outputs>
+  <tests>
+    <test>
+      <param name="input_fasta" value="14_H3_aa_seqs_aligned.fasta" />
+      <param name="index_array" value="FluA_H3_antigenic_aa_indices.csv" />
+      <output name="output_file" value="output.fasta" />
+    </test>
+  </tests>
+  <help><![CDATA[
+    Upload a fasta file containing full length flu sequences and an index array csv file.
+  ]]></help>
+  <citations>
+  </citations>
+</tool>
